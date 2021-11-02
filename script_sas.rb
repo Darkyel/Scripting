@@ -38,6 +38,9 @@ results.each do |result|
   result_clean = result_clean.gsub(/[Tt]wp/, 'Township').gsub(/[Tt]ownship [Tt]ownship/, 'Township')
   result_clean = result_clean.gsub(/[Hh]wy/, 'Highway').gsub(/[Hh]ighway [Hh]ighway/, 'Highway')
   result_clean = result_clean.gsub(/[Cc]ounty [Cc]ounty/, 'County')
+  result_clean = result_clean.gsub(/[Cc]ity [Cc]ity/, 'City')
+  result_clean = result_clean.gsub(/[Vv]illage [Vv]illage/, 'Village')
+  result_clean = result_clean.gsub(/[Pp]ark [Pp]ark/, 'Park')
   result_clean = result_clean.gsub('\'', '\\\\\'')
 
   result_sentence = "The candidate is running for the #{result_clean} office."
